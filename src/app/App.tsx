@@ -1,17 +1,13 @@
-import { Link } from 'react-router-dom';
+import React, { Suspense } from 'react';
 import './styles/index.scss';
-import { useTheme } from './providers/ThemeProvider/lib/useTheme';
-import { classNames } from '../shared/lib/classNames';
-import { AppRouter } from './providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';
-import { Suspense } from 'react';
-import { useTranslation } from 'react-i18next';
-import i18n from 'shared/config/i18n/i18n';
+import { AppRouter } from 'app/providers/router';
+import { classNames } from 'shared/lib/classNames';
+import { useTheme } from 'app/providers/ThemeProvider';
 
 export function App() {
   const { theme } = useTheme();
-
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
