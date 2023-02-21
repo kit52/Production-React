@@ -6,4 +6,7 @@
         "css",
         "scss"
     ],
+    "cSpell.words": [
+        "svgr"
+    ],
 }
