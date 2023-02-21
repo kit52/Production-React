@@ -12,7 +12,7 @@ export function App() {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
-
+          asd
         <div className="content-page">
           <Sidebar />
           <AppRouter />
