@@ -19,18 +19,16 @@
     "scope": "javascriptreact , typescriptreact",
     "prefix": "qwe",
     "body": [
-      "import { classNames } from 'shared/lib/classNames';",
+      "import { classNames } from 'shared/lib/classNames/classNames';",
       "import s from './$TM_FILENAME_BASE.module.scss';",
-
       "interface ${TM_FILENAME_BASE}Props {",
-      "	className?: string;",
+      "className?: string;",
       "}",
       "export const $TM_FILENAME_BASE = ({ className}: ${TM_FILENAME_BASE}Props) => {",
       "return (",
       "<div className={classNames(s.$TM_FILENAME_BASE,{},[className])}>",
-
       "</div>",
-      "	)};"
+      ")};"
     ],
     "description": "description"
   }
