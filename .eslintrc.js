@@ -34,7 +34,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'no-missing-end-of-source-newline': null,
+    'no-missing-end-of-source-newline': 0,
     'i18next/no-literal-string': [
       'error',
       {
