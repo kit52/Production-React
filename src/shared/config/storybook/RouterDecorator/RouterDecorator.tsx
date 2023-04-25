@@ -1,4 +1,6 @@
+//@ts-ignore
 import { Story } from '@storybook/react';
+//@ts-ignore
 import { BrowserRouter } from 'react-router-dom';
 
 export const RouterDecorator = (story: () => Story) => (
