@@ -9,4 +9,5 @@
     "cSpell.words": [
         "svgr"
     ],
+    "vue.features.codeActions.enable": false,
 }
