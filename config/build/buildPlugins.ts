@@ -1,7 +1,7 @@
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import webpack from 'webpack';
-import {  BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BuildOptions } from './types/config';
@@ -22,20 +22,19 @@ export default function buildPlugins({
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    
+
     new ReactRefreshWebpackPlugin({ overlay: false }),
-  
-      
-  ]
+
+  ];
   if (isDev) {
     plugins.push(
       new BundleAnalyzerPlugin({
-        openAnalyzer: false
-      })
-    )
+        openAnalyzer: false,
+      }),
+    );
     plugins.push(
-      new webpack.HotModuleReplacementPlugin()
-    )
+      new webpack.HotModuleReplacementPlugin(),
+    );
   }
-  return plugins
+  return plugins;
 }
