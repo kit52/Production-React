@@ -31,5 +31,17 @@
       ")};"
     ],
     "description": "description"
+  },
+  "test": {
+    "scope": "javascriptreact , typescriptreact, typescript",
+    "prefix": "asd",
+    "body": [
+      "describe('${TM_FILENAME_BASE/([^.]+).*/${1:/upcase}/}', () => {",
+      "test('return value', () => {",
+      " expect().toEqual();",
+      " });",
+      " });",
+    ],
+    "description": "description"
   }
 }
