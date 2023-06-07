@@ -1,15 +1,15 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
 import { classNames } from 'shared/lib/classNames/classNames';
-import s from './Modal.module.scss';
-import {
+import React, {
   ReactNode,
-  lazy,
   useCallback,
   useEffect,
   useRef,
   useState,
 } from 'react';
+import s from './Modal.module.scss';
 import { Portal } from '../Portal/Portal';
-import { useTheme } from 'app/providers/ThemeProvider';
+
 interface ModalProps {
   className?: string;
   children?: ReactNode;
@@ -55,7 +55,7 @@ export const Modal = ({
         closeHandler();
       }
     },
-    [closeHandler]
+    [closeHandler],
   );
   useEffect(() => {
     if (isOpen) {
@@ -72,8 +72,12 @@ export const Modal = ({
   return (
     <Portal>
       <div className={classNames(s.Modal, mods, [className])}>
-        <div className={s.overlay} onClick={closeHandler}>
-          <div className={s.content} onClick={onContentClick}>
+        <div className={s.overlay} onClick={closeHandler} role="presentation">
+          <div
+            className={s.content}
+            onClick={onContentClick}
+            role="presentation"
+          >
             {children}
           </div>
         </div>

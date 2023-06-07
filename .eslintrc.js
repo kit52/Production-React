@@ -35,6 +35,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'no-missing-end-of-source-newline': 0,
+    'no-param-reassign': 0,
     'i18next/no-literal-string': [
       'error',
       {
@@ -43,7 +44,7 @@ module.exports = {
       },
     ],
     'linebreak-style': 0,
-    'max-len': ['error', { ignoreComments: true, code: 100 }],
+    'max-len': ['error', { ignoreComments: true, code: 120 }],
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
   },

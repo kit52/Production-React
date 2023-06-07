@@ -1,6 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import s from './Input.module.scss';
-import {
+import React, {
   InputHTMLAttributes,
   memo,
   useEffect,
@@ -8,6 +7,7 @@ import {
   useState,
   lazy,
 } from 'react';
+import s from './Input.module.scss';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
@@ -78,10 +78,10 @@ export const Input = memo(
               style={{
                 left: `${caretPosition * 9}px`,
               }}
-            ></span>
+            />
           )}
         </div>
       </div>
     );
-  }
+  },
 );

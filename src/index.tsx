@@ -6,6 +6,7 @@ import ErrorBoundary from 'app/providers/ErrorBoundary/ui/ErrorBoundary';
 import './shared/config/i18n/i18n';
 import 'app/styles/index.scss';
 import { StoreProvider } from 'app/providers/StoreProvider';
+
 render(
   <StoreProvider>
     <BrowserRouter>
@@ -16,5 +17,5 @@ render(
       </ErrorBoundary>
     </BrowserRouter>
   </StoreProvider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
