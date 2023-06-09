@@ -1,15 +1,7 @@
 {
-    "extends": "stylelint-config-standard-scss",
-    "rules": {
-        "indentation": 4,
-        "selector-class-pattern": null,
-        "custom-property-no-missing-var-function": [
-            true,
-            {
-                "ignoreProperties": [
-                    "var"
-                ]
-            }
-        ]
-    }
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "indentation": [4],
+    "selector-class-pattern": null
+  }
 }

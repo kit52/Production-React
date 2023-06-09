@@ -1,9 +1,9 @@
 .Sidebar {
     height: calc(100vh - var(--navbar-height));
     width: var(--sidebar-width);
-    background-color: var(--inverted-bg-color);
-    transition: width 0.3s;
+    background: var(--inverted-bg-color);
     position: relative;
+    transition: width 0.3s;
 }
 
 .switchers {
@@ -18,28 +18,28 @@
     margin-left: 20px;
 }
 
+.collapseBtn {
+    position: absolute;
+    right: -32px;
+    bottom: 32px;
+}
+
 .items {
-    margin-left: 30px;
     margin-top: 20px;
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
-}
-
-.link {
-    opacity: 1;
-    margin-left: 10px;
-}
-
-.collapsedBtn {
-    position: absolute;
-    bottom: 32px;
-    right: -32px;
 }
 
 .item {
     margin-top: 10px;
     display: flex;
     align-items: center;
+}
+
+.link {
+    margin-left: 10px;
+    opacity: 1;
 }
 
 .icon {
@@ -60,7 +60,7 @@
 
     .link {
         opacity: 0;
-        transition: opacity 0.3s;
+        transition: 0.2s opacity;
         width: 0;
     }
 }
