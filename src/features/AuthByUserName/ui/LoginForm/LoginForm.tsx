@@ -8,14 +8,14 @@ import { memo, useCallback } from 'react';
 import { loginActions } from '../../model/slice/loginSlice';
 import { getLoginState } from '../../model/selectors/getLoginState';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
-
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 interface LoginFormProps {
   className?: string;
 }
 export const LoginForm = memo(({ className }: LoginFormProps) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const { username, password } = useSelector(getLoginState);
+  const { username, password, error, isLoading } = useSelector(getLoginState);
   const onChangeUserName = useCallback(
     (value: string) => {
       dispatch(loginActions.setUsername(value));
@@ -28,12 +28,12 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
     },
     [dispatch]
   );
-  const onLoginClick = useCallback(
-    () => dispatch(loginByUsername({ username, password })),
-    [dispatch]
-  );
+  const onLoginClick = useCallback(() => {
+    dispatch(loginByUsername({ username, password }));
+  }, [dispatch, username, password]);
   return (
     <div className={classNames(s.LoginForm, {}, [className])}>
+      {error && <Text text={error} theme={TextTheme.ERROR} />}
       <Input
         placeholder={t('Введите username')}
         autofocus
@@ -49,7 +49,11 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
         onChange={onChangePassword}
         value={password}
       />
-      <Button onClick={onLoginClick} className={s.loginBtn}>
+      <Button
+        onClick={onLoginClick}
+        className={s.loginBtn}
+        disabled={isLoading}
+      >
         {t('Войти')}
       </Button>
     </div>
