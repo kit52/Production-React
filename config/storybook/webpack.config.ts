@@ -3,14 +3,19 @@ import path from 'path';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../build/types/config';
 
-export default ({ config }: {config: webpack.Configuration}) => {
+export default ({ config }: { config: webpack.Configuration }) => {
     const paths: BuildPaths = {
         build: '',
         html: '',
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
     };
-    config.resolve.modules.push(paths.src);
+    if (config!.resolve!.modules) {
+    config!.resolve!.modules = [
+        path.resolve(__dirname, '../../src'),
+        'node_modules',
+    ];
+    }
     config.resolve.extensions.push('.ts', '.tsx');
 
     // eslint-disable-next-line no-param-reassign
@@ -28,9 +33,11 @@ export default ({ config }: {config: webpack.Configuration}) => {
     });
     config.module.rules.push(buildCssLoader(true));
 
-    config.plugins.push(new DefinePlugin({
-        __IS_DEV__: true,
-    }));
+    config.plugins.push(
+        new DefinePlugin({
+            __IS_DEV__: true,
+        }),
+    );
 
     return config;
 };
