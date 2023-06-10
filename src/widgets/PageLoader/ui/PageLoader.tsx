@@ -6,8 +6,8 @@ interface PageLoaderProps {
 className?: string;
 }
 export const PageLoader = ({ className }: PageLoaderProps) => (
-  // eslint-disable-next-line i18next/no-literal-string
-  <div className={classNames(s.PageLoader, {}, [className])}>
-    <Loader />
-  </div>
+    // eslint-disable-next-line i18next/no-literal-string
+    <div className={classNames(s.PageLoader, {}, [className])}>
+        <Loader />
+    </div>
 );

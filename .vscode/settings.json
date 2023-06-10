@@ -7,7 +7,11 @@
         "scss"
     ],
     "cSpell.words": [
+        "reduxjs",
         "svgr"
     ],
     "vue.features.codeActions.enable": false,
+    "AllAutocomplete.dontContributeToSelf": true,
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "all",
 }
