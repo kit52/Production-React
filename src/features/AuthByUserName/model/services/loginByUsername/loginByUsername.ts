@@ -15,10 +15,7 @@ export const loginByUsername = createAsyncThunk<
   ThunkConfig<string>
 >('login/loginByUsername', async (authData, thunkAPI) => {
   try {
-    const response = await thunkAPI.extra.api.post<User>(
-      'http://localhost:8000/login',
-      authData
-    );
+    const response = await thunkAPI.extra.api.post<User>('/login', authData);
 
     if (!response.data) {
       throw new Error();
