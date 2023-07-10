@@ -14,15 +14,72 @@
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "text": "some comment",
+      "articleId": "1",
+      "userId": "1"
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "title": "Title ",
+      "subtitle": "subtitle",
+      "img": "http://russkievesti.ru/assets/images/resources/20622/perito-moreno-samyij-fotogenichnyij-lednik-v-mire-1.jpg",
+      "views": 100,
+      "createdAt": "25.08.2023",
+      "type": [
+        "test"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "title block",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,",
+            "dolorem vel laborum porro blanditiis magnam nobis eaque. Perspiciatis,",
+            " explicabo maiores voluptatibus tenetur vel placeat saepe consectetur",
+            "ut natus et animi!"
+          ]
+        },
+        {
+          "id": "23",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n<body>\n<p id=\"hello\"></p>\n<script>\ndocument.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n</script>\n</body>\n</html>"
+        },
+        {
+          "id": "12",
+          "type": "IMAGE",
+          "src": "http://russkievesti.ru/assets/images/resources/20622/perito-moreno-samyij-fotogenichnyij-lednik-v-mire-1.jpg",
+          "title": "title img"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Title 2",
+      "subtitle": "subtitle 2",
+      "img": "http://russkievesti.ru/assets/images/resources/20622/perito-moreno-samyij-fotogenichnyij-lednik-v-mire-1.jpg",
+      "views": 1002,
+      "createdAt": "25.08.2023",
+      "type": [
+        "test2"
+      ],
+      "blocks": []
     }
   ],
   "users": [
     {
       "id": 1,
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "123",
+      "role": "USER"
     }
   ],
   "profile": {

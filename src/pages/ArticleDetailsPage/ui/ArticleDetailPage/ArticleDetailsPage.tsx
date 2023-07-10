@@ -1,16 +1,23 @@
-import React, { memo, useState } from 'react';
+import { ArticleDetails } from 'entities/Article';
+import { NotFoundPage } from 'pages/NotFoundPage';
+import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from 'shared/ui/Input/Input';
+import { useParams } from 'react-router-dom';
 
 const ArticleDetailsPage = () => {
   const { t } = useTranslation();
-  const [value, setValue] = useState('');
 
-  const onChange = (val: string) => {
-    setValue(val);
-  };
+  const { id } = useParams();
 
-  return <div>{t('Articel detail')}</div>;
+  if (!id) {
+    return <NotFoundPage />;
+  }
+  return (
+    <div>
+      {t('Articel detail')}
+      <ArticleDetails id={id} />
+    </div>
+  );
 };
 
 export default memo(ArticleDetailsPage);
