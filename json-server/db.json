@@ -52,6 +52,17 @@
           "type": "IMAGE",
           "src": "http://russkievesti.ru/assets/images/resources/20622/perito-moreno-samyij-fotogenichnyij-lednik-v-mire-1.jpg",
           "title": "title img"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "title block",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,",
+            "dolorem vel laborum porro blanditiis magnam nobis eaque. Perspiciatis,",
+            " explicabo maiores voluptatibus tenetur vel placeat saepe consectetur",
+            "ut natus et animi!"
+          ]
         }
       ]
     },

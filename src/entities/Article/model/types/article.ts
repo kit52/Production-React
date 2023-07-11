@@ -21,7 +21,10 @@ export interface ArticleTextBlock extends ArticleBlockBase {
   title?: string;
   paragraphs: string[];
 }
-export interface ArticleBLock {}
+export type ArticleBlock =
+  | ArticleCodeBlock
+  | ArticleImageBlock
+  | ArticleTextBlock;
 export enum ArticleType {
   IT = 'IT',
   SCIENCE = 'SCIENCE',
@@ -35,5 +38,5 @@ export interface Article {
   views: number;
   createdAt: string;
   type: ArticleType[];
-  blocks: ArticleBLock[];
+  blocks: ArticleBlock[];
 }
