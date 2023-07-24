@@ -84,23 +84,39 @@
       "id": 1,
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1686830592~exp=1686831192~hmac=43630beba2880ce63c91f1e3f46765d52b17cbbbf844931d32bce95582f843c3"
     },
     {
       "id": 2,
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://avatars.mds.yandex.net/i?id=ad1ff928d01f1ba943e9859e4ea28fbeb140d867-9106331-images-thumbs&n=13"
     }
   ],
-  "profile": {
-    "first": "1",
-    "lastName": "fallback",
-    "age": "22",
-    "currency": "EUR",
-    "country": " Belarus",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1686830592~exp=1686831192~hmac=43630beba2880ce63c91f1e3f46765d52b17cbbbf844931d32bce95582f843c3"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "1",
+      "lastName": "fallback",
+      "age": "22",
+      "currency": "EUR",
+      "country": " Belarus",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1686830592~exp=1686831192~hmac=43630beba2880ce63c91f1e3f46765d52b17cbbbf844931d32bce95582f843c3"
+    },
+    {
+      "id": "2",
+      "first": "2",
+      "lastName": "fallback",
+      "age": "22",
+      "currency": "EUR",
+      "country": " Belarus",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://avatars.mds.yandex.net/i?id=ad1ff928d01f1ba943e9859e4ea28fbeb140d867-9106331-images-thumbs&n=13"
+    }
+  ]
 }
