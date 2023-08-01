@@ -17,6 +17,24 @@
       "text": "some comment",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "text": "comment",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "articleId": "1",
+      "text": "test comment",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "articleId": "1",
+      "text": "test c",
+      "userId": 2,
+      "id": 4
     }
   ],
   "articles": [

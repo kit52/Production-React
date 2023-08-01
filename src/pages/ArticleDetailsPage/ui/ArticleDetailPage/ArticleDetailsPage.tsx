@@ -23,7 +23,8 @@ import { useInitialEffect } from 'shared/lib/hooks/useAppDispatch/useInitialEffe
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
-import { AddCommentForArticle } from '../../model/services/addCommentForArticle/AddCommentForArticle';
+import { AddCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
+
 const reducers: ReducersList = {
   articleDetailsComments: articleDetailsCommentsReducer,
 };

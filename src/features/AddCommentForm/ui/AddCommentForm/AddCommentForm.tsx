@@ -18,11 +18,10 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { sendComment } from 'features/AddCommentForm/model/services/sendComment';
 
 export interface AddCommentFormProps {
   className?: string;
-  onSendComment?: () => void;
+  onSendComment: () => void;
 }
 const reducers: ReducersList = {
   addCommentForm: addCommentFormReducer,
@@ -39,7 +38,10 @@ const AddCommentForm: FC<AddCommentFormProps> = memo((props) => {
     },
     [dispatch]
   );
-
+  const onSendHandler = useCallback(() => {
+    onSendComment();
+    onCommentTextChange('');
+  }, [dispatch, onCommentTextChange, text]);
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames(cls.addCommentForm, {}, [className])}>
@@ -48,7 +50,7 @@ const AddCommentForm: FC<AddCommentFormProps> = memo((props) => {
           value={text}
           onChange={onCommentTextChange}
         />
-        <Button onClick={onSendComment}>{t('Отправить')}</Button>
+        <Button onClick={onSendHandler}>{t('Отправить')}</Button>
       </div>
     </DynamicModuleLoader>
   );
