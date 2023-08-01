@@ -5,3 +5,4 @@ import { ArticleDetails } from './ui/ArticleDetails/ArticleDetails';
 export { ArticleDetails };
 export type { Article };
 export { ArticleDetailsSchema };
+export { ArticleList } from './ui/ArticleList/ArticleList';

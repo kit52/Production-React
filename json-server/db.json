@@ -45,6 +45,7 @@
       "img": "http://russkievesti.ru/assets/images/resources/20622/perito-moreno-samyij-fotogenichnyij-lednik-v-mire-1.jpg",
       "views": 100,
       "createdAt": "25.08.2023",
+      "user": "2",
       "type": [
         "test"
       ],
@@ -91,6 +92,7 @@
       "img": "http://russkievesti.ru/assets/images/resources/20622/perito-moreno-samyij-fotogenichnyij-lednik-v-mire-1.jpg",
       "views": 1002,
       "createdAt": "25.08.2023",
+      "user": "1",
       "type": [
         "test2"
       ],
@@ -108,9 +110,9 @@
     {
       "id": 2,
       "username": "user",
+      "avatar": "https://avatars.mds.yandex.net/i?id=ad1ff928d01f1ba943e9859e4ea28fbeb140d867-9106331-images-thumbs&n=13",
       "password": "123",
-      "role": "USER",
-      "avatar": "https://avatars.mds.yandex.net/i?id=ad1ff928d01f1ba943e9859e4ea28fbeb140d867-9106331-images-thumbs&n=13"
+      "role": "USER"
     }
   ],
   "profile": [
