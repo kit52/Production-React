@@ -1,0 +1,17 @@
+.articleViewSelector {
+    svg {
+        fill: var(--secondary-color);
+        stroke: var(--secondary-color);
+        margin-right: 10px;
+    }
+
+
+}
+
+.current {
+    svg {
+        fill: var(--inverted-bg-color);
+        stroke: var(--inverted-bg-color);
+
+    }
+}
