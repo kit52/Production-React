@@ -18,7 +18,7 @@ import {
   getArticlePageView,
 } from '../model/selectors/articlePageSelectors';
 import { ArticleListItemView } from 'entities/Article/ui/ArticleListItem/ArticleListItem';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { fetchNextArticlesPage } from '../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 
 const reducers = {

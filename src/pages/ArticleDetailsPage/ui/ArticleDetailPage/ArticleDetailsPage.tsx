@@ -24,7 +24,7 @@ import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByAr
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { AddCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 
 const reducers: ReducersList = {
   articleDetailsComments: articleDetailsCommentsReducer,
