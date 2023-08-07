@@ -19,7 +19,6 @@ const viewTypes = [
   },
   {
     view: ArticleListItemView.BIG,
-
     icon: ListIcon,
   },
 ];

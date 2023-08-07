@@ -11,11 +11,14 @@ import {
 } from '../model/slice/articlePageSlice';
 import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
+  getArticlePageCurrentPage,
   getArticlePageError,
   getArticlePageIsLoading,
   getArticlePageView,
 } from '../model/selectors/articlePageSelectors';
 import { ArticleListItemView } from 'entities/Article/ui/ArticleListItem/ArticleListItem';
+import { Page } from 'shared/ui/Page/Page';
+import { fetchNextArticlesPage } from '../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 
 const reducers = {
   articlePage: articlePageSliceReducer,
@@ -26,22 +29,26 @@ const ArticleDetailsPage = () => {
   const isLoading = useSelector(getArticlePageIsLoading);
   const error = useSelector(getArticlePageError);
   const view = useSelector(getArticlePageView);
+  const page = useSelector(getArticlePageCurrentPage);
   const onChangeView = useCallback(
     (view) => {
-      console.log('click2');
-      console.log(view);
       dispatch(articlePageSliceAction.setView(view));
-      console.log(view);
     },
     [dispatch]
   );
   useInitialEffect(() => {
-    dispatch(fetchArticles());
+    dispatch(articlePageSliceAction.initState());
+    dispatch(fetchArticles({ page: 1 }));
   });
+  const onScrollEnd = useCallback(() => {
+    dispatch(fetchNextArticlesPage());
+  }, []);
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <ArticleViewSelector view={view} onChangeView={onChangeView} />
-      <ArticleList articles={articles} view={view} isLoading={isLoading} />
+      <Page onScrollEnd={onScrollEnd}>
+        <ArticleViewSelector view={view} onChangeView={onChangeView} />
+        <ArticleList articles={articles} view={view} isLoading={isLoading} />
+      </Page>
     </DynamicModuleLoader>
   );
 };

@@ -24,6 +24,7 @@ import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByAr
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { AddCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
+import { Page } from 'shared/ui/Page/Page';
 
 const reducers: ReducersList = {
   articleDetailsComments: articleDetailsCommentsReducer,
@@ -46,13 +47,13 @@ const ArticleDetailsPage = () => {
   });
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={s.ArticleDetailsPage}>
+      <Page className={s.ArticleDetailsPage}>
         {t('Articel detail')}
         <ArticleDetails id={id} />
         <Text className={s.commentTitle} title={t('Комментарии')} />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={commentsIsLoading} comments={comments} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };
