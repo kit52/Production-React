@@ -21,8 +21,7 @@ export const getSidebarItems = createSelector(getUserAuthData, (user) => {
       text: 'О сайте',
     },
   ];
-  console.log('ssssssssssssssssssssssssssssss');
-  console.log(user);
+
   if (user) {
     sidebarItems.push(
       {
