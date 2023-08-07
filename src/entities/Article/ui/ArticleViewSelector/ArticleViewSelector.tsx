@@ -38,6 +38,7 @@ export const ArticleViewSelector: FC<ArticleViewSelectorProps> = memo(
             <Button
               theme={ButtonTheme.CLEAR}
               onClick={handleChangeView(type.view)}
+              key={type.view}
               className={classNames(
                 '',
                 { [cls.current]: view == type.view },

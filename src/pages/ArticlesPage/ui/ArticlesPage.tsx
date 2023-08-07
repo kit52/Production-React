@@ -13,6 +13,7 @@ import { DynamicModuleLoader } from 'shared/lib/components/DynamicModuleLoader/D
 import {
   getArticlePageCurrentPage,
   getArticlePageError,
+  getArticlePageInited,
   getArticlePageIsLoading,
   getArticlePageView,
 } from '../model/selectors/articlePageSelectors';
@@ -30,6 +31,7 @@ const ArticleDetailsPage = () => {
   const error = useSelector(getArticlePageError);
   const view = useSelector(getArticlePageView);
   const page = useSelector(getArticlePageCurrentPage);
+  const inited = useSelector(getArticlePageInited);
   const onChangeView = useCallback(
     (view) => {
       dispatch(articlePageSliceAction.setView(view));
@@ -37,8 +39,10 @@ const ArticleDetailsPage = () => {
     [dispatch]
   );
   useInitialEffect(() => {
-    dispatch(articlePageSliceAction.initState());
-    dispatch(fetchArticles({ page: 1 }));
+    if (!inited) {
+      dispatch(articlePageSliceAction.initState());
+      dispatch(fetchArticles({ page: 1 }));
+    }
   });
   const onScrollEnd = useCallback(() => {
     dispatch(fetchNextArticlesPage());
