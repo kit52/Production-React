@@ -39,8 +39,7 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
   }, [dispatch]);
   const user = useSelector(getUserAuthData);
   const profile = useSelector(getProfileData);
-  console.log(user?.id);
-  console.log(profile?.id);
+
   if (user?.id != profile?.id) {
     return (
       <div className={classNames(cls.ProfilePageHeader, {}, [className])}>

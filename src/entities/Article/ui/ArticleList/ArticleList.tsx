@@ -30,9 +30,7 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
     view = ArticleListItemView.SMALL,
   } = props;
   const { t } = useTranslation();
-  useEffect(() => {
-    console.log(`view-${view}`);
-  });
+
   const renderArticles = (article: Article) => {
     return <ArticleListItem article={article} view={view} key={article.id} />;
   };

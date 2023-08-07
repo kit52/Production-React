@@ -14,8 +14,7 @@ export function useInfinityScroll({
     let observer = null;
     const wrapperElement = wrapper.current;
     const triggerElement = trigger.current;
-    console.log('useINFINITY');
-    console.log(wrapperElement);
+
     let options = {
       root: wrapperElement,
       rootMargin: '1px',

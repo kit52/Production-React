@@ -34,7 +34,6 @@ export const AddCommentForArticle = createAsyncThunk<
     dispatch(fetchCommentsByArticleId(article.id));
     return response.data;
   } catch (e) {
-    console.log(e);
     return rejectWithValue('error');
   }
 });

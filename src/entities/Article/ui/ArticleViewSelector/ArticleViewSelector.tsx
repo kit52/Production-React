@@ -27,7 +27,6 @@ export const ArticleViewSelector: FC<ArticleViewSelectorProps> = memo(
   (props) => {
     const { className, onChangeView, view } = props;
     const handleChangeView = (view: ArticleListItemView) => () => {
-      console.log('click');
       onChangeView(view);
     };
 
