@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Skeleton } from './Skeleton';
-import { Dark } from '../../../pages/ArticlesPage/ui/ArticlesPage.stories';
+import { Dark } from '../../../pages/ArticlesPage/ui/ArticlePage/ArticlesPage.stories';
 
 export default {
   title: 'shared/Skeleton',
